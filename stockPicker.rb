@@ -2,7 +2,7 @@ def stock_picker(days)
   greater = 0
   indexes = [0, 0]
   days.each_with_index do |i, idx|
-    for item in (idx + 1)..days.length
+    for item in (idx + 1)..(days.length - 1)
       diff = days[item] - i
       if diff > 0 && diff > greater
         greater = diff
